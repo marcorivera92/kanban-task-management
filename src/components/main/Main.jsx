@@ -39,7 +39,9 @@ const Main = () => {
     if (searchValue === "") {
       setTasks(taskList);
     } else {
-      const updateSearch = tasks.filter((item) => item.title.toLowerCase().includes(searchValue));
+      const updateSearch = taskList.filter((item) =>
+        item.title.toLowerCase().includes(searchValue)
+      );
       setTasks(updateSearch);
     }
   };
@@ -96,13 +98,13 @@ const Main = () => {
           {/* ------------ */}
         </div>
         <div className={styles.hero}>
-          {tasks.length > 0 ? (
+          {taskList.length > 0 ? (
             <>
-              <TaskList tasks={tasks} setTasks={setTasks} />
+              <TaskList tasks={taskList} setTasks={setTasks} />
               {/* DESKTOP GRID */}
-              <ColumnTodo setTasks={setTasks} tasks={tasks} />
-              <ColumnProgress setTasks={setTasks} tasks={tasks} />
-              <ColumnCompleted setTasks={setTasks} tasks={tasks} />
+              <ColumnTodo setTasks={setTasks} tasks={taskList} />
+              <ColumnProgress setTasks={setTasks} tasks={taskList} />
+              <ColumnCompleted setTasks={setTasks} tasks={taskList} />
             </>
           ) : (
             <p className={styles.error_message}> No results found for "{searchValue}" </p>

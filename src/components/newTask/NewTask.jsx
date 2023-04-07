@@ -32,6 +32,7 @@ const Newtask = ({ openModal, setOpenModal }) => {
         status,
       })
     );
+
     setTitle("");
     setDescription("");
     setPriority("low");
