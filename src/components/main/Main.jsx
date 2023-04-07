@@ -62,12 +62,7 @@ const Main = () => {
           <CurrentDate />
 
           <div className={styles.searchbar}>
-            <Searchbar
-              tasks={tasks}
-              setTasks={setTasks}
-              searchValue={searchValue}
-              setSearchValue={setSearchValue}
-            />
+            <Searchbar searchValue={searchValue} setSearchValue={setSearchValue} />
           </div>
           {/* BUTTONS */}
           <div className={styles.buttons}>
@@ -100,7 +95,7 @@ const Main = () => {
         <div className={styles.hero}>
           {taskList.length > 0 ? (
             <>
-              <TaskList tasks={taskList} setTasks={setTasks} />
+              <TaskList tasks={tasks} setTasks={setTasks} />
               {/* DESKTOP GRID */}
               <ColumnTodo setTasks={setTasks} tasks={taskList} />
               <ColumnProgress setTasks={setTasks} tasks={taskList} />
