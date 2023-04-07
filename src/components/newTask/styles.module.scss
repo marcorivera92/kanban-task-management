@@ -1,0 +1,235 @@
+.main {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  @media only screen and (min-width: 1280px) {
+    flex-direction: row;
+  }
+
+  .title_header {
+    display: flex;
+    align-items: center;
+    padding: var(--page-padding);
+
+    @media only screen and (min-width: 768px) {
+      padding: 2rem;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      width: 380px;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    h2 {
+      color: #f5f5f5;
+      font-weight: 500;
+      font-size: 1rem;
+      @media only screen and (min-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .btn_arrow {
+      position: absolute;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15px;
+      border: none;
+      background: transparent;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      border: 1px solid rgb(69, 69, 69);
+      border-radius: 100%;
+      @media only screen and (min-width: 768px) {
+        width: 45px;
+        height: 45px;
+      }
+
+      @media only screen and (min-width: 1280px) {
+        position: unset;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .form {
+      padding: var(--page-padding);
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      gap: 1rem;
+      background-color: white;
+      color: black;
+
+      h3 {
+        font-size: 0.7rem;
+        @media only screen and (min-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+
+      .title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        @media only screen and (min-width: 768px) {
+          gap: 0.5rem;
+        }
+        input {
+          width: 100%;
+          height: 40px;
+          background-color: #f4f4f4;
+          border: none;
+          border-radius: 0.875rem;
+          padding: 0 0.8rem;
+          font-size: 0.8rem;
+          color: #000000;
+          &:focus {
+            outline: none;
+          }
+          &:focus::placeholder {
+            color: transparent;
+          }
+          @media only screen and (min-width: 768px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        @media only screen and (min-width: 768px) {
+          gap: 0.5rem;
+        }
+        textarea {
+          font-family: inherit;
+          width: 100%;
+          background-color: #f4f4f4;
+          border: none;
+          border-radius: 0.875rem;
+          padding: 0 0.8rem;
+          padding-bottom: 5rem;
+          padding-top: 0.6rem;
+          font-size: 0.8rem;
+          color: #000000;
+          resize: none;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: rgb(125, 124, 124);
+          }
+          &:focus::placeholder {
+            color: transparent;
+          }
+          @media only screen and (min-width: 768px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .priority {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        @media only screen and (min-width: 768px) {
+          gap: 0.5rem;
+        }
+        .switch_field {
+          width: 100%;
+          display: flex;
+          overflow: hidden;
+          transition: all 0.1s ease-in-out;
+          height: 45px;
+          border-radius: 0.875rem;
+          background-color: #f4f4f4;
+
+          input {
+            width: 100%;
+            height: 1px;
+            width: 1px;
+            border: 0;
+            overflow: hidden;
+            &:checked + label {
+              border-radius: 0.875rem;
+              box-shadow: none;
+              font-weight: 500;
+              color: black;
+            }
+          }
+          label {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 12px 16px;
+            margin-right: -1px;
+            border: none;
+            transition: all 0.25s ease-in-out;
+            width: 100%;
+            &:hover {
+              cursor: pointer;
+            }
+            @media only screen and (min-width: 768px) {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+    width: 100%;
+    height: 35px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+    text-align: center;
+    border-radius: 0.875rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    &:hover {
+      color: #fec663;
+    }
+  }
+
+  .priority_low {
+    background-color: #fadd72 !important;
+    border-top-right-radius: 0.875rem;
+    border-bottom-right-radius: 0.875rem;
+  }
+
+  .priority_medium {
+    background-color: #fec663 !important;
+  }
+
+  .priority_high {
+    background-color: #e56e4f !important;
+  }
+}

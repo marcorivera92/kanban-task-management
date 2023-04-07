@@ -1,0 +1,79 @@
+.main {
+  height: calc(100% - var(--header-height));
+  overflow-y: scroll;
+  @media only screen and (min-width: 1280px) {
+    height: 100vh;
+  }
+
+  .title {
+    width: 70%;
+    padding: var(--page-padding);
+    h2 {
+      letter-spacing: 1px;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+  }
+
+  .widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    padding: 0.5rem 0;
+
+    .searchbar {
+      @media only screen and (min-width: 1280px) {
+        padding-right: 1rem;
+      }
+    }
+
+    .buttons {
+      padding-right: 1rem;
+      display: flex;
+      gap: 0.2rem;
+      @media only screen and (min-width: 768px) {
+        gap: 0.4rem;
+      }
+      @media only screen and (min-width: 1280px) {
+        display: none;
+      }
+
+      .btn_el {
+        border: none;
+        border: 2px solid #121212;
+        border-radius: 24px;
+        padding: 0.3rem;
+        background: transparent;
+        color: #121212;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .hero {
+    padding-top: 0;
+    @media only screen and (min-width: 1280px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      height: 100vh;
+      overflow-y: hidden;
+    }
+
+    .error_message {
+      margin-top: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+/* SPECIAL CLASSES */
+.active_btn {
+  background-color: #121212 !important;
+  color: #f5f5f5 !important;
+}

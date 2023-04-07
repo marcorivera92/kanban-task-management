@@ -1,0 +1,20 @@
+.main {
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+}

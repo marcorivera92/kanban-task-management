@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  @media only screen and (min-width: 1280px) {
+    flex-direction: row;
+  }
+
+  .center {
+    @media only screen and (min-width: 1280px) {
+      width: 100%;
+      overflow-y: scroll;
+    }
+    .hero {
+      height: 100%;
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    @media only screen and (min-width: 1280px) {
+      position: unset;
+      bottom: unset;
+      left: unset;
+      height: 100vh;
+      padding: 0;
+      width: unset;
+    }
+  }
+}
